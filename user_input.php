@@ -10,10 +10,10 @@
 <body>
   <!-- Web Forms are a common way to get user input in PHP -->
 
-  <!-- To create a form in html first use the form tag to create a form and
-  discribe the file its acting on and what method its doing. Then use the input
-  tag within the form to get user input. Lastly create a submit button which is
-  used to submit the users input. -->
+  <!-- To create a form in html first use the form tag to create the form and
+  discribe the file its acting on plus what method its using (get, post, etc).
+  Then use the input tag within the form to get user input. Lastly create a
+  submit button which is used to submit the users input. -->
 
   <form action="user_input.php" method="get">
     Name: <input type="text" name="nombre">
@@ -27,6 +27,6 @@
   ?>
 
   <!-- Remember UserInput is evil! Sanatize your text boxes! -->
-  
+
 </body>
 </html>
