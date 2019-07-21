@@ -9,30 +9,67 @@
 
 <body>
 
-  <form action="if_statements.php" method="post">
-    <p>Do you like cats or dogs?</p>
-    <input type="text" name="animal">
-    <input type="submit">
-  </form>
-  <br><br>
+  <p>Change the files PHP variables to print out different results:</p>
 
   <?php
-    //Takes user input from textbox and sees if it is male or female.
-    $animal = $_POST["animal"];
-    if ($animal == "dogs"){
-      echo "Doggos are vgood!";
-    } else {
-      echo "Kitties are good too";
+
+    //For output clarity
+    function newLine(){
+      echo "\n<br>\n";
+    }
+    
+    $isMale = false;
+    $isTall = true;
+    $likesDogs = false;
+
+    //Prints message based off bool value
+    if ($isMale && $isTall){            //Use "&&" as and operator (aka both conditions must be met)
+      echo "You are a tall male";
+    } elseif ($isMale && !$isTall){     //Use "!" as a negation operator
+      echo "You are a short male";
+    } elseif (!$isMale && $isTall){
+      echo "You are not male and are tall";
+    } else{
+      echo "You are not male and are not tall";
     }
 
-    echo "<br>\n";
+    newLine();
 
-    $isCool = True;
-    if ($animal == "dogs" && $isCool){
-        echo "You're cool and you like dogs!";
-    } else {
-      echo "You're okay.";
+    if ($isMale || $likesDogs){         //Use "||" as or operator (aka either one or the other must be met)
+      echo "You are either male or you like dogs";
+    } elseif (!$isMale && !$likesDogs){
+      echo "You are not male and do not like dogs";
     }
+
+    newLine();
+
+    //Using compairson operators with if statements
+    /*Create function to get max or two numbers (in reality the "max()"
+    function already exists. But this is for demonstration)*/
+    function getMax($num1, $num2){
+      if ($num1 > $num2){                //Use ">", "<", "==", "!=", "<=", and ">=" as compairson operators
+        return $num1;
+      } else {
+        return $num2;
+      }
+    }
+
+    echo getMax(300, 90);
+
+    newLine();
+
+    //Create a max num compairer with 3 numbers
+    function getMax3($num1, $num2, $num3){
+      if ($num1 >= $num2 && $num1 >= $num3) {
+        return $num1;
+      } elseif($num2 >= $num1 && $num2 >= $num3) {
+        return $num2;
+      } else {
+        return $num3;
+      }
+    }
+
+    echo getMax3(77,10,20);
   ?>
 
 </body>
