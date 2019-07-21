@@ -18,7 +18,7 @@
 
   //A class is a specification for a custom data type
   echo "<h4>Classes:</h4>";
-  NewLine();
+  echo "\n";
     class Book {
       var $title;           //Every class has attributes which can be assigned to it
       var $author;
@@ -54,7 +54,7 @@
 
     //Using Constructors in the creation of objects
     echo "<h4>Constructors:</h4>";
-    NewLine();
+    echo "\n";
 
     class Painting {
       var $artist;
@@ -84,7 +84,7 @@
 
     //Additional Object Functions
     echo "<h4>Additional Object Functions:</h4>";
-    NewLine();
+    echo "\n";
     class Student {
       var $name;
       var $major;
@@ -123,7 +123,7 @@
 
     //Getters and Setters
     echo "<h4>Getters and Setters:</h4>";
-    NewLine();
+    echo "\n";
     /*Getters and Setters are PHP classes which allow us to control the degree
     of access which users have to the attributes of classes. */
     class Movie {
@@ -181,7 +181,7 @@
 
     //Inheritance
     echo "<h4>Inheritance:</h4>";
-    NewLine();
+    echo "\n";
 
     class Chef {
       function makeTofu(){
